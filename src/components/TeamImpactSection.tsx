@@ -2,7 +2,7 @@
 import React from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-import CurvedUnderline from "./CurvedUnderLine";
+// import CurvedUnderline from "./CurvedUnderLine";
 import Image from "next/image";
 
 export default function TeamImpactSection() {
@@ -48,10 +48,9 @@ export default function TeamImpactSection() {
 
             {/* Description */}
             <p className="text-muted-foreground text-lg leading-relaxed mb-12">
-              At Panzle, We're a software and AI agency focused on helping
-              startups and businesses harness technology to drive growth.
-              Whether you're building from scratch or enhancing an existing
-              system, we bring technical expertise and a passion for innovation.
+              {
+                "  At Panzle, We're a software and AI agency focused on helping startups and businesses harness technology to drive growth. Whether you're building from scratch or enhancing an existing system, we bring technical expertise and a passion for innovation."
+              }
             </p>
 
             {/* Stats */}

@@ -47,11 +47,12 @@ export default function ContactFormSection() {
             {/* Header */}
             <div className="mb-8">
               <h2 className="text-4xl sm:text-5xl font-bold leading-tight mb-4 font-plus">
-                Let's Talk About Your Next Big Idea
+                {" Let's Talk About Your Next Big Idea"}
               </h2>
               <p className="text-muted-foreground text-base font-inter">
-                Tell us what you're building. We'll show you how AI and software
-                can make it smarter, faster, and more scalable.
+                {
+                  "  Tell us what you're building. We'll show you how AI and software can make it smarter, faster, and more scalable."
+                }
               </p>
             </div>
 

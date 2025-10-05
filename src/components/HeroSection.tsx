@@ -57,8 +57,7 @@ export default function HeroSection() {
             </h3>
 
             <p className="text-muted-foreground italic max-w-md font-Inter">
-              "They turned our vision into a working AI product in just 8 weeks.
-              Fast, focused, and incredibly smart."
+              {`"They turned our vision into a working AI product in just 8 weeks. Fast, focused, and incredibly smart."`}
             </p>
 
             <div className="flex items-center gap-3 pt-2">

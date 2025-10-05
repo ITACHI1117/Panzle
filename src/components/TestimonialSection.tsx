@@ -102,7 +102,7 @@ export default function TestimonialsSection() {
 
               {/* Quote */}
               <p className="text-muted-foreground text-sm leading-relaxed mb-6 font-inter">
-                "{testimonial.quote}"
+                {`"${testimonial.quote}"`}
               </p>
 
               {/* Author */}
