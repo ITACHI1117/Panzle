@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/form";
 import { contactFormSchema } from "@/schema/contactFormSchema";
 import Image from "next/image";
+import { toast } from "sonner";
 
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
@@ -31,11 +32,27 @@ export default function ContactFormSection() {
 
   const onSubmit = async (data: ContactFormValues) => {
     console.log("Form submitted:", data);
+    toast.info("Sending Message");
     // Handle form submission here (e.g., send to API)
-    // await fetch('/api/contact', { method: 'POST', body: JSON.stringify(data) });
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify(data),
+      });
 
-    // Reset form after successful submission
-    form.reset();
+      const result = await res.json();
+
+      if (res.ok) {
+        toast.success("Message Sent Successfully");
+        form.reset();
+      } else {
+        throw new Error(result.message || "Failed to send message");
+      }
+    } catch (err) {
+      toast.error(
+        `${err instanceof Error ? err.message : "Something went wrong"}`
+      );
+    }
   };
 
   return (
