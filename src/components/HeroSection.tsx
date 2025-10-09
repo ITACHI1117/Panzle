@@ -45,7 +45,7 @@ export default function HeroSection() {
                 {[1, 2, 3, 4, 5].map((star) => (
                   <Star
                     key={star}
-                    className="w-5 h-5 fill-yellow-400 text-yellow-400"
+                    className="w-5 h-5 fill-orange-500 text-orange-500"
                   />
                 ))}
               </div>
