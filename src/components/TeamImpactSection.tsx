@@ -86,51 +86,59 @@ export default function TeamImpactSection() {
           {/* Right Column - Team Images Grid */}
           <div className="grid grid-cols-2 gap-4">
             {/* Top Left Image */}
-            <div className="aspect-[3/4] border-4 border-red-500 overflow-hidden">
-              <Image
-                src="/images/team1.webp"
-                quality={90}
-                width={400}
-                height={533}
-                alt="team image"
-                className="w-full h-full object-cover"
-              />
+            <div className="aspect-[3/4] p-[4px] bg-gradient-to-r from-[#E7C770] via-[#F47C5B] to-[#FD4D4D]  overflow-hidden">
+              <div className="bg-white w-full h-full rounded-[calc(theme(borderRadius.xl)-4px)]">
+                <Image
+                  src="/images/team1.webp"
+                  quality={90}
+                  width={400}
+                  height={533}
+                  alt="team image"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
 
             {/* Top Right Image */}
-            <div className="aspect-[3/4] border-4 border-red-500 overflow-hidden">
-              <Image
-                src="/images/team2.webp"
-                quality={90}
-                width={400}
-                height={533}
-                alt="team image"
-                className="w-full h-full object-cover"
-              />
+            <div className="aspect-[3/4] p-[4px] bg-gradient-to-r from-[#E7C770] via-[#F47C5B] to-[#FD4D4D]  overflow-hidden">
+              <div className="bg-white w-full h-full rounded-[calc(theme(borderRadius.xl)-4px)]">
+                <Image
+                  src="/images/team2.webp"
+                  quality={90}
+                  width={400}
+                  height={533}
+                  alt="team image"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
 
             {/* Bottom Left Image */}
-            <div className="aspect-[3/4] border-4 border-red-500 overflow-hidden">
-              <Image
-                src="/images/team3.webp"
-                quality={90}
-                width={400}
-                height={533}
-                alt="team image"
-                className="w-full h-full object-cover"
-              />
+            <div className="aspect-[3/4] p-[4px] bg-gradient-to-r from-[#E7C770] via-[#F47C5B] to-[#FD4D4D]  overflow-hidden">
+              <div className="bg-white w-full h-full rounded-[calc(theme(borderRadius.xl)-4px)]">
+                <Image
+                  src="/images/team3.webp"
+                  quality={90}
+                  width={400}
+                  height={533}
+                  alt="team image"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
 
             {/* Bottom Right Image */}
-            <div className="aspect-[3/4] border-4 border-red-500 overflow-hidden">
-              <Image
-                src="/images/team4.webp"
-                quality={90}
-                width={400}
-                height={533}
-                alt="team image"
-                className="w-full h-full object-cover"
-              />
+            <div className="aspect-[3/4] p-[4px] bg-gradient-to-r from-[#E7C770] via-[#F47C5B] to-[#FD4D4D]  overflow-hidden">
+              <div className="bg-white w-full h-full rounded-[calc(theme(borderRadius.xl)-4px)]">
+                <Image
+                  src="/images/team4.webp"
+                  quality={90}
+                  width={400}
+                  height={533}
+                  alt="team image"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>

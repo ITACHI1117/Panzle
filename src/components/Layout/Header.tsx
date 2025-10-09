@@ -64,13 +64,23 @@ export default function Header() {
             className="flex items-center gap-2 cursor-pointer flex-shrink-0"
             onClick={() => router.push("/")}
           >
-            <Image
-              src="/Panzle.png"
-              width={150}
-              height={150}
-              alt="panzle logo"
-              className="w-32 sm:w-40 lg:w-48 h-auto"
-            />
+            {theme === "light" ? (
+              <Image
+                src="/Panzle.png"
+                width={150}
+                height={150}
+                alt="panzle logo"
+                className="w-32 sm:w-40 lg:w-48 h-auto"
+              />
+            ) : (
+              <Image
+                src="/PanzleLight.png"
+                width={150}
+                height={150}
+                alt="panzle logo"
+                className="w-32 sm:w-40 lg:w-48 h-auto"
+              />
+            )}
           </div>
 
           {/* Desktop Navigation */}

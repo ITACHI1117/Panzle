@@ -68,8 +68,8 @@ export default function ServicesSection() {
                     ? "md:border-l-0"
                     : index == 3
                     ? "md:border-l-0"
-                    : "md:border-l-2 mf:"
-                }${
+                    : "md:border-l-2"
+                }  ${
                   index >= 3 && "md:border-t-2"
                 } hover:border-orange-400/50 transition-all duration-300 hover:shadow-md`}
               >
