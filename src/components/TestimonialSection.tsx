@@ -7,63 +7,75 @@ export default function TestimonialsSection() {
   const testimonials = [
     {
       rating: 5,
-      title: "Best Software developer in market!",
+      title: "Great experience working with Panzle.",
       quote:
-        "They turned our vision into a working AI product in just 8 weeks. Fast, focused, and incredibly smart.",
-      author: "Amina D.",
-      role: "CEO at SmartHire",
-      avatar: "/images/Amina.webp",
-      initials: "AD",
+        "They were thorough with their detailed answers to my questions and were very friendly. Extremely knowledgeable with AI, RAG applications, and ML.",
+      author: "James T",
+      role: "AI Research Lead",
+      avatar: "/images/James.webp",
+      initials: "JT",
     },
     {
       rating: 5,
-      title: "Best Software developer in market!",
+      title: "Panzle was great to work with",
       quote:
-        "They turned our vision into a working AI product in just 8 weeks. Fast, focused, and incredibly smart.",
-      author: "Amina D.",
-      role: "CEO at SmartHire",
-      avatar: "/images/Amina.webp",
-      initials: "AD",
+        "Fully engaged, enthusiastic, and brought fresh ideas to the project. Their broad skillset is a strong asset that should attract many employers.",
+      author: "Michael O",
+      role: "Product Manager",
+      avatar: "/images/Michael.webp",
+      initials: "MO",
     },
     {
       rating: 5,
-      title: "Best Software developer in market!",
+      title: "Panzle demonstrated high-level expertise.",
       quote:
-        "They turned our vision into a working AI product in just 8 weeks. Fast, focused, and incredibly smart.",
-      author: "Amina D.",
-      role: "CEO at SmartHire",
-      avatar: "/images/Amina.webp",
-      initials: "AD",
+        "They swiftly improved the performance of our recommendation system. Thank you.",
+      author: "Grace N",
+      role: "Data Scientist",
+      avatar: "/images/Grace.webp",
+      initials: "GN",
     },
     {
       rating: 5,
-      title: "Best Software developer in market!",
+      title:
+        "Panzle is highly knowledgeable about the challenges AI projects face when it comes to data preparation.",
       quote:
-        "They turned our vision into a working AI product in just 8 weeks. Fast, focused, and incredibly smart.",
-      author: "Amina D.",
-      role: "CEO at SmartHire",
-      avatar: "/images/Amina.webp",
-      initials: "AD",
+        "Their insight into preprocessing data for AI readiness was extremely valuable, and their feedback helped us understand what is required to address these challenges",
+      author: "David K",
+      role: "CTO",
+      avatar: "/images/David.webp",
+      initials: "DK",
     },
     {
       rating: 5,
-      title: "Best Software developer in market!",
+      title: "Panzle clearly knows their craft",
       quote:
-        "They turned our vision into a working AI product in just 8 weeks. Fast, focused, and incredibly smart.",
-      author: "Amina D.",
-      role: "CEO at SmartHire",
-      avatar: "/images/Amina.webp",
-      initials: "AD",
+        "After discussing my project, I gained a much better understanding and look forward to working with them going forward.",
+      author: "Sophia L",
+      role: "Founder",
+      avatar: "/images/Sophia.webp",
+      initials: "SL",
     },
     {
       rating: 5,
-      title: "Best Software developer in market!",
+      title:
+        "Panzle delivered excellent results on the ARIMA time-series model",
+      quote: "A highly professional team I definitely recommend. Thank you.",
+      author: "Emmanuel B",
+      role: "Lead Analyst",
+      avatar: "/images/Emmanuel.webp",
+      initials: "EB",
+    },
+    {
+      rating: 5,
+      title:
+        "Our conversational AI solution exceeded expectations thanks to Panzle",
       quote:
-        "They turned our vision into a working AI product in just 8 weeks. Fast, focused, and incredibly smart.",
-      author: "Amina D.",
-      role: "CEO at SmartHire",
-      avatar: "/images/Amina.webp",
-      initials: "AD",
+        "Our AI Solution was delivered on short notice, yet the quality exceeded expectations. I will continue to trust Panzle’s expertise in machine learning. Thank you.",
+      author: "Linda M",
+      role: "Operations Director",
+      avatar: "/images/Linda.webp",
+      initials: "LM",
     },
   ];
 
@@ -112,7 +124,7 @@ export default function TestimonialsSection() {
                     src={testimonial.avatar}
                     alt={testimonial.author}
                   />
-                  <AvatarFallback className="bg-gradient-to-br from-purple-400 to-pink-400 text-white text-xs">
+                  <AvatarFallback className="bg-gradient-to-br from-orange-400 to-orange-400 text-white text-xs">
                     {testimonial.initials}
                   </AvatarFallback>
                 </Avatar>

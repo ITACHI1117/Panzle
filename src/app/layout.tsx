@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/Theme/ThemeProvider";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 import { Toaster } from "sonner";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
 
 const inter = Inter({
   variable: "--font-inter-sans",
@@ -21,10 +21,10 @@ const plusJarkata = Plus_Jakarta_Sans({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
 
 export const metadata: Metadata = {
   // Basic Metadata
@@ -150,10 +150,10 @@ export const organizationSchema = {
     email: "contact@panzle.com", // Update with your email
   },
   sameAs: [
-    "https://twitter.com/panzle", // Update with your actual social media
-    "https://www.linkedin.com/company/panzle",
-    "https://www.instagram.com/panzle",
-    "https://www.facebook.com/panzle",
+    "https://x.com/panzle_official?s=21", // Update with your actual social media
+    "https://www.linkedin.com/company/panzle/",
+    // "https://www.instagram.com/panzle",
+    // "https://www.facebook.com/panzle",
   ],
   aggregateRating: {
     "@type": "AggregateRating",
@@ -236,7 +236,7 @@ export const localBusinessSchema = {
   url: "https://panzle.com",
   address: {
     "@type": "PostalAddress",
-    addressCountry: "US",
+    addressCountry: "NG",
   },
 };
 
@@ -263,7 +263,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${plusJarkata.variable} ${inter.variable} antialiased`}
+        // ${geistSans.variable} ${geistMono.variable}
+        className={`${plusJarkata.variable} ${inter.variable} antialiased`}
       >
         <ThemeProvider
           attribute={"class"}

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Instagram, Facebook, Twitter } from "lucide-react";
+import { Instagram, Facebook, Twitter, Linkedin } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -80,15 +80,15 @@ export default function Footer() {
             {/* Social Icons */}
             <div className="flex items-center gap-4">
               <a
-                href="https://instagram.com/panzle"
+                href="https://www.linkedin.com/company/panzle/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
-                aria-label="Instagram"
+                aria-label="LinkedIn"
               >
-                <Instagram className="w-5 h-5" />
+                <Linkedin className="w-5 h-5" />
               </a>
-              <a
+              {/* <a
                 href="https://facebook.com/panzle"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -96,9 +96,9 @@ export default function Footer() {
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
-              </a>
+              </a> */}
               <a
-                href="https://twitter.com/panzle"
+                href="https://x.com/panzle_official?s=21"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
