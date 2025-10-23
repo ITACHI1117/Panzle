@@ -1,5 +1,5 @@
 import { contactFormSchema } from "@/schema/contactFormSchema";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { z } from "zod";
 import nodemailer from "nodemailer";
 

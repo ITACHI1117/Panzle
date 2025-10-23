@@ -79,10 +79,10 @@ export default function TeamImpactSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              At Panzle, We're a software and AI agency focused on helping
+              {` At Panzle, We're a software and AI agency focused on helping
               startups and businesses harness technology to drive growth.
               Whether you're building from scratch or enhancing an existing
-              system, we bring technical expertise and a passion for innovation.
+              system, we bring technical expertise and a passion for innovation.`}
             </motion.p>
 
             {/* Stats with enhanced animations */}

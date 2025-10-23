@@ -3,7 +3,6 @@ import React from "react";
 import { Code2, Bot, Sparkles, Palette, Database } from "lucide-react";
 import CurvedUnderline from "./CurvedUnderLine";
 import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
 
 export default function ServicesSection() {
   const services = [

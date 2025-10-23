@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Instagram, Facebook, Twitter, Linkedin } from "lucide-react";
+import { Twitter, Linkedin } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 

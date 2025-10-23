@@ -32,7 +32,28 @@ export default function ContactFormSection() {
   });
 
   const onSubmit = async (data: ContactFormValues) => {
-    // ... your submit logic stays the same
+    console.log("Form submitted:", data);
+    toast.info("Sending Message");
+    // Handle form submission here (e.g., send to API)
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify(data),
+      });
+
+      const result = await res.json();
+
+      if (res.ok) {
+        toast.success("Message Sent Successfully");
+        form.reset();
+      } else {
+        throw new Error(result.message || "Failed to send message");
+      }
+    } catch (err) {
+      toast.error(
+        `${err instanceof Error ? err.message : "Something went wrong"}`
+      );
+    }
   };
 
   const formVariants = {
@@ -78,7 +99,7 @@ export default function ContactFormSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                Let's Talk About Your Next Big Idea
+                {` Let's Talk About Your Next Big Idea`}
               </motion.h2>
               <motion.p
                 className="text-muted-foreground text-base font-inter"
@@ -87,8 +108,8 @@ export default function ContactFormSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                Tell us what you're building. We'll show you how AI and software
-                can make it smarter, faster, and more scalable.
+                {` Tell us what you're building. We'll show you how AI and software
+                can make it smarter, faster, and more scalable.`}
               </motion.p>
             </div>
 
