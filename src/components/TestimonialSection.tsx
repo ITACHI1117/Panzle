@@ -1,7 +1,9 @@
+"use client";
 import React from "react";
 import { Star } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import CurvedUnderline from "./CurvedUnderLine";
+import { motion } from "framer-motion";
 
 export default function TestimonialsSection() {
   const testimonials = [
@@ -12,7 +14,7 @@ export default function TestimonialsSection() {
         "They were thorough with their detailed answers to my questions and were very friendly. Extremely knowledgeable with AI, RAG applications, and ML.",
       author: "James T",
       role: "AI Research Lead",
-      avatar: "/images/James.webp",
+      avatar: "",
       initials: "JT",
     },
     {
@@ -22,7 +24,7 @@ export default function TestimonialsSection() {
         "Fully engaged, enthusiastic, and brought fresh ideas to the project. Their broad skillset is a strong asset that should attract many employers.",
       author: "Michael O",
       role: "Product Manager",
-      avatar: "/images/Michael.webp",
+      avatar: "",
       initials: "MO",
     },
     {
@@ -32,7 +34,7 @@ export default function TestimonialsSection() {
         "They swiftly improved the performance of our recommendation system. Thank you.",
       author: "Grace N",
       role: "Data Scientist",
-      avatar: "/images/Grace.webp",
+      avatar: "",
       initials: "GN",
     },
     {
@@ -43,7 +45,7 @@ export default function TestimonialsSection() {
         "Their insight into preprocessing data for AI readiness was extremely valuable, and their feedback helped us understand what is required to address these challenges",
       author: "David K",
       role: "CTO",
-      avatar: "/images/David.webp",
+      avatar: "",
       initials: "DK",
     },
     {
@@ -53,7 +55,7 @@ export default function TestimonialsSection() {
         "After discussing my project, I gained a much better understanding and look forward to working with them going forward.",
       author: "Sophia L",
       role: "Founder",
-      avatar: "/images/Sophia.webp",
+      avatar: "",
       initials: "SL",
     },
     {
@@ -63,7 +65,7 @@ export default function TestimonialsSection() {
       quote: "A highly professional team I definitely recommend. Thank you.",
       author: "Emmanuel B",
       role: "Lead Analyst",
-      avatar: "/images/Emmanuel.webp",
+      avatar: "",
       initials: "EB",
     },
     {
@@ -74,7 +76,7 @@ export default function TestimonialsSection() {
         "Our AI Solution was delivered on short notice, yet the quality exceeded expectations. I will continue to trust Panzle’s expertise in machine learning. Thank you.",
       author: "Linda M",
       role: "Operations Director",
-      avatar: "/images/Linda.webp",
+      avatar: "",
       initials: "LM",
     },
   ];
@@ -83,27 +85,56 @@ export default function TestimonialsSection() {
     <section id="reviews" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="mb-16">
+        <motion.div
+          className="mb-16"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="text-4xl sm:text-5xl font-bold relative inline-block">
             What Our Clients Are Saying
             <CurvedUnderline />
           </h2>
-        </div>
+        </motion.div>
 
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {testimonials.map((testimonial, index) => (
-            <div
+            <motion.div
               key={index}
               className="border-border p-6 hover:shadow-lg transition-shadow duration-300"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.1,
+                ease: "easeOut",
+              }}
+              whileHover={{
+                y: -8,
+                transition: { duration: 0.3 },
+              }}
             >
-              {/* Star Rating */}
+              {/* Star Rating with animation */}
               <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star
+                  <motion.div
                     key={i}
-                    className="w-5 h-5 fill-orange-400 text-orange-400"
-                  />
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.3,
+                      delay: index * 0.1 + i * 0.05 + 0.3,
+                      type: "spring",
+                      stiffness: 200,
+                    }}
+                    whileHover={{ scale: 1.2 }}
+                  >
+                    <Star className="w-5 h-5 fill-orange-400 text-orange-400" />
+                  </motion.div>
                 ))}
               </div>
 
@@ -118,7 +149,13 @@ export default function TestimonialsSection() {
               </p>
 
               {/* Author */}
-              <div className="flex items-center gap-3 pt-4 border-t border-border">
+              <motion.div
+                className="flex items-center gap-3 pt-4 border-t border-border"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 + 0.5 }}
+              >
                 <Avatar className="w-8 h-8">
                   <AvatarImage
                     src={testimonial.avatar}
@@ -133,8 +170,8 @@ export default function TestimonialsSection() {
                     {testimonial.author}, {testimonial.role}
                   </p>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
       </div>
