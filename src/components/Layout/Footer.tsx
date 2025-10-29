@@ -17,11 +17,11 @@ export default function Footer() {
               onClick={() => router.push("/")}
             >
               <Image
-                src="/images/PanzleFooterLogo.png"
+                src="/PanzleLight.webp"
                 width={150}
                 height={150}
                 alt="panzle logo"
-                className="w-32 sm:w-40 lg:w-48 h-auto"
+                className="w-26 h-auto"
               />
             </div>
           </div>

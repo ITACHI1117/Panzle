@@ -66,19 +66,19 @@ export default function Header() {
           >
             {theme === "light" ? (
               <Image
-                src="/Panzle.png"
-                width={150}
-                height={150}
+                src="/Panzle.webp"
+                width={100}
+                height={100}
                 alt="panzle logo"
-                className="w-32 sm:w-40 lg:w-48 h-auto"
+                className="w-20  h-auto"
               />
             ) : (
               <Image
-                src="/PanzleLight.png"
-                width={150}
-                height={150}
+                src="/PanzleLight.webp"
+                width={190}
+                height={100}
                 alt="panzle logo"
-                className="w-32 sm:w-40 lg:w-48 h-auto"
+                className="w-20 h-auto"
               />
             )}
           </div>

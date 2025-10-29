@@ -28,6 +28,7 @@ const plusJarkata = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   // Basic Metadata
+  metadataBase: new URL("https://panzle.com"),
   title: {
     default:
       "Panzle - AI-Driven Custom Software Development & Automation Solutions",
@@ -76,7 +77,7 @@ export const metadata: Metadata = {
       "Leading AI software agency helping startups and businesses automate, scale, and innovate with custom software development and artificial intelligence solutions.",
     images: [
       {
-        url: "/og-image.jpg", // Create a 1200x630px image
+        url: "/panzel-og-img.png", // Create a 1200x630px image
         width: 1200,
         height: 630,
         alt: "Panzle - AI-Driven Software Solutions",
@@ -90,8 +91,8 @@ export const metadata: Metadata = {
     title: "Panzle - AI-Driven Custom Software Development & Automation",
     description:
       "Transform your business with AI-powered software solutions. Custom development, AI integration, and automation for startups and enterprises.",
-    images: ["/twitter-image.jpg"], // Create a 1200x600px image
-    creator: "@panzle", // Replace with your Twitter handle
+    images: ["/panzel-og-img.png"], // Create a 1200x600px image
+    creator: "@panzle_official", // Replace with your Twitter handle
   },
 
   // Robots
@@ -136,21 +137,21 @@ export const organizationSchema = {
   "@type": "Organization",
   name: "Panzle",
   url: "https://panzle.com",
-  logo: "https://panzle.com/logo.png",
+  logo: "https://panzle.com/Panzel.webp",
   description:
     "AI-driven software development agency specializing in custom software, AI integration, and automation solutions for startups and enterprises.",
-  foundingDate: "2020", // Update with your actual founding date
+  foundingDate: "2025", // Update with your actual founding date
   address: {
     "@type": "PostalAddress",
-    addressCountry: "US", // Update with your country
+    addressCountry: "NG", // Update with your country
   },
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "Customer Service",
-    email: "contact@panzle.com", // Update with your email
+    email: "tunde@panzle.com", // Update with your email
   },
   sameAs: [
-    "https://x.com/panzle_official?s=21", // Update with your actual social media
+    "https://x.com/panzle_official?s=21",
     "https://www.linkedin.com/company/panzle/",
     // "https://www.instagram.com/panzle",
     // "https://www.facebook.com/panzle",
@@ -227,12 +228,10 @@ export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "Panzle",
-  image: "https://panzle.com/logo.png",
+  image: "https://panzle.com/Panzel.webp",
   description:
     "AI and software development agency helping businesses automate, scale, and innovate",
-  priceRange: "$$",
-  telephone: "+1-XXX-XXX-XXXX", // Add your phone number
-  email: "contact@panzle.com",
+  email: "tunde@panzle.com",
   url: "https://panzle.com",
   address: {
     "@type": "PostalAddress",
@@ -262,6 +261,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+      </head>
       <body
         // ${geistSans.variable} ${geistMono.variable}
         className={`${plusJarkata.variable} ${inter.variable} antialiased`}

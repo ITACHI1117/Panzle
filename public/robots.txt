@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://panzle.com
+
+# Sitemaps
+Sitemap: https://panzle.com/sitemap.xml
